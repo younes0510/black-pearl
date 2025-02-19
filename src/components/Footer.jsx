@@ -1,7 +1,7 @@
 export function Footer() {
     return (
         <>
-            <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
+            {/* <footer className="footer footer-horizontal footer-center bg-base-200 text-base-content rounded p-10">
                 <nav>
                     <div className="grid grid-flow-col gap-4">
                         <a className="cursor-pointer">
@@ -16,26 +16,10 @@ export function Footer() {
                             </svg>
                         </a>
                         <a className="cursor-pointer">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                className="fill-current"
-                            >
-                                <path d="M19.615 3.184c-3.604-.246-11.631-.245-15.23 0-3.897.266-4.356 2.62-4.385 8.816.029 6.185.484 8.549 4.385 8.816 3.6.245 11.626.246 15.23 0 3.897-.266 4.356-2.62 4.385-8.816-.029-6.185-.484-8.549-4.385-8.816zm-10.615 12.816v-8l8 3.993-8 4.007z"></path>
-                            </svg>
+                            <span class="icon-[hugeicons--instagram] w-6 h-6"></span>
                         </a>
                         <a className="cursor-pointer">
-                            <svg
-                                xmlns="http://www.w3.org/2000/svg"
-                                width="24"
-                                height="24"
-                                viewBox="0 0 24 24"
-                                className="fill-current"
-                            >
-                                <path d="M9 8h-3v4h3v12h5v-12h3.642l.358-4h-4v-1.667c0-.955.192-1.333 1.115-1.333h2.885v-5h-3.808c-3.596 0-5.192 1.583-5.192 4.615v3.385z"></path>
-                            </svg>
+                            <i class="bx bxl-meta"></i>
                         </a>
                     </div>
                 </nav>
@@ -45,6 +29,43 @@ export function Footer() {
                         Industries Ltd
                     </p>
                 </aside>
+            </footer> */}
+
+            <footer className="flex justify-between items-center p-10 color-white bg-black">
+                <div className="flex flex-col gap-3 justify-center items-center">
+                    <img className="h-25 w-25" src="the-black-pearl-restaurant.jpg" alt="" />
+                    <p>Copyright © {new Date().getFullYear()} - All right reserved</p>
+                </div>
+                <div>
+                    <h2 className="text-xl font-bold hover:underline cursor-pointer py-6">
+                        Contacts
+                    </h2>
+                    <ul className="flex flex-col gap-3">
+                        <li>wwrgdfg</li>
+                        <li>blackpearl@food.food</li>
+                        <li>Everywhere</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 className="text-xl font-bold hover:underline cursor-pointer py-6">
+                        Quick Links
+                    </h2>
+                    <ul className="flex flex-col gap-3">
+                        <li>How it works</li>
+                        <li>About</li>
+                        <li>Why Choose Us</li>
+                    </ul>
+                </div>
+                <div>
+                    <h2 className="text-xl font-bold hover:underline cursor-pointer py-6">
+                        Food Packages
+                    </h2>
+                    <ul className="flex flex-col gap-3">
+                        <li>Detox</li>
+                        <li>Balanced</li>
+                        <li>Feshaan</li>
+                    </ul>
+                </div>
             </footer>
         </>
     );
