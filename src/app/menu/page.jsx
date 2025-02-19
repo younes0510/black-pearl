@@ -17,35 +17,21 @@ export default function Menu() {
     }, []);
 
     return (
-        // <div className="bg-[#1d232a] min-h-screen text-white">
-        //     <div className="text-center text-white text-3xl py-10 font-bold">
-        //         <h1 className="mb-10">NOTRE MENU</h1>
-        //         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4 max-w-7xl mx-auto">
-        //             {menuItems.map((item, index) => (
-        //                 <div key={index} className="flex flex-col items-center cursor-pointer bg-[#2b2f36] p-4 rounded-lg shadow-lg">
-                            
-        //                     <h1 className="text-xl mt-4 font-bold">{item.name}</h1>
-        //                     <p className="mt-2 text-lg">{item.description}</p>
-        //                     <p className="mt-2 text-lg font-bold">{item.price} €</p>
-        //                 </div>
-        //             ))}
-        //         </div>
-        //     </div>
-        // </div>
-        <div className="bg-[#1d232a] min-h-screen text-white">
-            <div className="text-center text-white text-3xl py-10 font-bold bg-[#8693a1] max-w-6xl mx-auto">
+        <div className="bg-[#1d232a] min-h-screen text-white pt-7 ">
+            <div className="text-center text-white text-3xl py-10 font-bold bg-[#4f5a66] max-w-6xl mx-auto rounded-2xl">
                 <h1 className="mb-10">NOTRE MENU</h1>
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4 ">
-                   
-                        <div  className="flex flex-col items-center cursor-pointer  p-4 rounded-lg shadow-lg">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4 max-w-7xl mx-auto">
+                    {menuItems.map((item, index) => (
+                        <div key={index} className="flex flex-col items-center cursor-pointer  p-4 rounded-lg shadow-lg">
                             
-                            <h1 className="text-xl mt-4 font-bold">jre</h1>
-                            <p className="mt-2 text-lg">kzeikvcendz</p>
-                            <p className="mt-2 text-lg font-bold">122 €</p>
+                            <h1 className="text-xl mt-4 font-bold">{item.name}</h1>
+                            <p className="mt-2 text-lg">{item.description}</p>
+                            <p className="mt-2 text-lg font-bold">{item.price} €</p>
                         </div>
-                   
+                    ))}
                 </div>
             </div>
         </div>
+        
     );
 }
