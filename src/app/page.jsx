@@ -5,9 +5,7 @@ export default function Home() {
         <img src="black.jpg" className="w-full h-[550px] object-cover" />
         <div className="absolute inset-0 flex flex-col items-center justify-center text-white">
           <h1 className="text-7xl font-bold">Black Pearl</h1>
-          <button className="mt-4 px-4 py-2 bg-white text-black rounded cursor-pointer">
-            Decouvrir
-          </button>
+          
         </div>
       </div>
 
@@ -20,6 +18,7 @@ export default function Home() {
               className="w-full h-[500px] object-cover"
               alt="Appetizer"
             />
+            <h1 className="mt-4">Appetizer</h1>
           </div>
           <div className="flex flex-col items-center cursor-pointer">
             <img
@@ -27,6 +26,7 @@ export default function Home() {
               className="w-full h-[500px] object-cover"
               alt="Caviar"
             />
+            <h1 className="mt-4">MAIN COURSE</h1>
           </div>
           <div className="flex flex-col items-center cursor-pointer">
             <img
@@ -34,6 +34,7 @@ export default function Home() {
               className="w-full h-[500px] object-cover"
               alt="Dessert"
             />
+            <h1 className="mt-4">Dessert</h1>
           </div>
         </div>
       </div>
