@@ -1,9 +1,7 @@
-
-
 export default function Home() {
-  return (
-   <>
-    
-   </>
-  )
+    return (
+        <>
+            <p className="text-red-400">dfsf</p>
+        </>
+    );
 }

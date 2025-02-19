@@ -1,10 +1,3 @@
-export function Navbar (){
-
-return(
-    <>
-    
-    </>
-)
-
-
+export function Navbar() {
+    return <></>;
 }
