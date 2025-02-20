@@ -46,74 +46,51 @@ export default function Commande() {
   return (
     <div>
       <div className="flex flex-col lg:flex-row justify-between lg:space-x-6 max-w-7xl mx-auto">
-        <div className="w-full lg:w-2/3 text-black py-9">
-          <h1 className="text-2xl">Panier et options</h1>
-          <p>
-            Devenez membre YV pour bénéficier de cadeaux, remises et expériences
-            exclusifs !
-          </p>
-
-          {basketLength === 0 ? (
-            <div className="text-center my-40 flex items-center justify-center gap-2 ">
-              <div><p className="text-lg">Votre panier est vide.</p>
-              <Link
-                href="/shop"
-                className="text-green-600 font-semibold hover:underline"
-              >
-                Retourner au menu
-              </Link></div>
-            </div>
-          ) : (
-            <>
-              <div className="space-y-6 mb-8 bg-slate-200 w-full max-w-2xl mx-auto my-8 rounded-lg p-4 shadow-lg">
-                {plats.map((item, index) => (
-                  <div key={item.plat?.id || index}>
-                    <div className="flex justify-between items-center p-4">
-                      {item.plat?.image && (
-                        <img
-                          src={item.plat.image}
-                          className="w-28 h-40 object-cover rounded-lg"
-                        />
-                      )}
-                      <div className="flex flex-col flex-grow px-4">
-                        <ul>
-                          <li className="text-gray-800 text-lg font-semibold">
-                            {item.plat?.name || "Unknown plat"}
-                          </li>
-                          <li className="text-gray-600">
-                            quantity: {item.quantity}
-                          </li>
-                          <li className="text-green-600 text-lg font-bold">
-                            {item.plat?.price || 0} DZD
-                          </li>
-                        </ul>
-                      </div>
-                      <button
-                        className="cursor-pointer"
-                        onClick={() => dispatch(removeFromBasket(index))}
-                      >
-                        <MdOutlineDeleteOutline />
-                      </button>
-                    </div>
-                    {index !== plats.length - 1 && (
-                      <hr className="border-gray-300" />
-                    )}
+        <div className="w-full text-black py-9">
+          <>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8 bg-gray-100 w-full max-w-2xl mx-auto my-8 rounded-lg p-4 shadow-lg">
+              {plats.map((item, index) => (
+                <div key={item.plat?.id || index} className="flex justify-between items-center p-4 bg-white rounded-lg shadow">
+                  {item.plat?.image && (
+                    <img
+                      src={item.plat.image}
+                      className="w-28 h-40 object-cover rounded-lg"
+                    />
+                  )}
+                  <div className="flex flex-col flex-grow px-4">
+                    <ul>
+                      <li className="text-gray-800 text-lg font-semibold">
+                        {item.plat?.name || "Unknown plat"}
+                      </li>
+                      <li className="text-gray-600">
+                        quantity: {item.quantity}
+                      </li>
+                      <li className="text-green-600 text-lg font-bold">
+                        {item.plat?.price || 0} DZD
+                      </li>
+                    </ul>
                   </div>
-                ))}
-              </div>
-              <div className="space-y-6 mb-8 bg-[#002d18] w-full max-w-2xl mx-auto my-8 rounded-lg p-4 shadow-lg text-white">
-                <div className="space-y-6 mb-8 w-full max-w-2xl mx-auto my-8 p-4">
                   <button
-                    className="w-full py-3 bg-green-600 text-white font-semibold rounded-lg hover:bg-green-700 transition duration-300"
-                    onClick={handleCreateOrder}
+                    className="cursor-pointer"
+                    onClick={() => dispatch(removeFromBasket(index))}
                   >
-                    Passer la commande
+                    <MdOutlineDeleteOutline />
                   </button>
-                  {error && <p className="text-red-500 mt-4">{error}</p>}
                 </div>
+              ))}
+            </div>
+            <div className="space-y-6 mb-8  w-full max-w-2xl mx-auto my-8 rounded-lg p-4 shadow-lg text-white">
+              <div className="space-y-6 mb-8 w-full max-w-2xl mx-auto my-8 p-4">
+                <button
+                  className="w-full py-3 bg-white text-black font-semibold rounded-lg hover:bg-gray-700 transition duration-300"
+                  onClick={handleCreateOrder}
+                >
+                  Passer la commande
+                </button>
+                {error && <p className="text-red-500 mt-4">{error}</p>}
               </div>
-            </>
-          )}
+            </div>
+          </>
         </div>
       </div>
     </div>

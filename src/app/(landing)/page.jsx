@@ -12,7 +12,7 @@ export default function Home() {
       </div>
 
       <div className="text-center text-white text-3xl py-10 font-bold">
-        <h1 className="mb-10">NOTRE MENU</h1>
+        <h1 className="mb-10"> MENU</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4 max-w-7xl mx-auto">
    <Link href={'/menu'}>   <div className="flex flex-col items-center cursor-pointer">
             <img
@@ -20,7 +20,7 @@ export default function Home() {
               className="w-full h-[500px] object-cover"
               alt="Appetizer"
             />
-            <h1 className="mt-4">Appetizer</h1>
+            <h1 className="mt-4">Nos Entrées</h1>
           </div></Link>
         <Link href={'/menu'}>  <div className="flex flex-col items-center cursor-pointer">
             <img
@@ -28,7 +28,7 @@ export default function Home() {
               className="w-full h-[500px] object-cover"
               alt="Caviar"
             />
-            <h1 className="mt-4">MAIN COURSE</h1>
+            <h1 className="mt-4">Nos plats</h1>
           </div></Link>
          <Link href={'/menu'}> <div className="flex flex-col items-center cursor-pointer">
             <img
@@ -36,7 +36,7 @@ export default function Home() {
               className="w-full h-[500px] object-cover"
               alt="Dessert"
             />
-            <h1 className="mt-4">Dessert</h1>
+            <h1 className="mt-4">Nos Desserts</h1>
           </div></Link>
         </div>
       </div>
