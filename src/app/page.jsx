@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <div className="bg-[#1d232a]">
@@ -12,30 +14,30 @@ export default function Home() {
       <div className="text-center text-white text-3xl py-10 font-bold">
         <h1 className="mb-10">NOTRE MENU</h1>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-4 max-w-7xl mx-auto">
-          <div className="flex flex-col items-center cursor-pointer">
+   <Link href={'/menu'}>   <div className="flex flex-col items-center cursor-pointer">
             <img
               src="appetizer.jpg"
               className="w-full h-[500px] object-cover"
               alt="Appetizer"
             />
             <h1 className="mt-4">Appetizer</h1>
-          </div>
-          <div className="flex flex-col items-center cursor-pointer">
+          </div></Link>
+        <Link href={'/menu'}>  <div className="flex flex-col items-center cursor-pointer">
             <img
               src="caviar.jpg"
               className="w-full h-[500px] object-cover"
               alt="Caviar"
             />
             <h1 className="mt-4">MAIN COURSE</h1>
-          </div>
-          <div className="flex flex-col items-center cursor-pointer">
+          </div></Link>
+         <Link href={'/menu'}> <div className="flex flex-col items-center cursor-pointer">
             <img
               src="dessert.jpg"
               className="w-full h-[500px] object-cover"
               alt="Dessert"
             />
             <h1 className="mt-4">Dessert</h1>
-          </div>
+          </div></Link>
         </div>
       </div>
 
